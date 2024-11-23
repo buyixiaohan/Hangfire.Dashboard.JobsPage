@@ -19,7 +19,7 @@
 		<Authors>buyi xiaohan</Authors>
 		<Company />
 		<Product>Hangfire.Dashboard.JobsPage</Product>
-		<AssemblyVersion>0.2.0.0</AssemblyVersion>
+		<AssemblyVersion>0.4.0</AssemblyVersion>
 		<PackageReleaseNotes></PackageReleaseNotes>
 	
 	</PropertyGroup>
@@ -93,6 +93,7 @@
 		<MSBuildCurrentFullPath>$(MSBuildBinPath)\MSBuild.exe</MSBuildCurrentFullPath>
 		<RazorProjectFile>Razor.build</RazorProjectFile>
 		<InnerTargets>GenerateRazorClasses;Build</InnerTargets>
+		<FileVersion>0.1.1</FileVersion>
 	</PropertyGroup>
 
 	<Target Name="GenerateRazorClasses" Condition="Exists('$(PkgRazorGenerator_MsBuild)\build\RazorGenerator.MsBuild.targets')">
