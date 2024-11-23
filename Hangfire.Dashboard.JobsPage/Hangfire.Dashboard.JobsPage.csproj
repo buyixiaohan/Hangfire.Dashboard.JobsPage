@@ -19,7 +19,7 @@
 		<Authors>buyi xiaohan</Authors>
 		<Company />
 		<Product>Hangfire.Dashboard.JobsPage</Product>
-		<AssemblyVersion>0.3.0.0</AssemblyVersion>
+		<AssemblyVersion>0.4.0</AssemblyVersion>
 		<PackageReleaseNotes></PackageReleaseNotes>
 	
 	</PropertyGroup>
