@@ -93,7 +93,7 @@
 		<MSBuildCurrentFullPath>$(MSBuildBinPath)\MSBuild.exe</MSBuildCurrentFullPath>
 		<RazorProjectFile>Razor.build</RazorProjectFile>
 		<InnerTargets>GenerateRazorClasses;Build</InnerTargets>
-		<FileVersion>0.1.0</FileVersion>
+		<FileVersion>0.1.1</FileVersion>
 	</PropertyGroup>
 
 	<Target Name="GenerateRazorClasses" Condition="Exists('$(PkgRazorGenerator_MsBuild)\build\RazorGenerator.MsBuild.targets')">
