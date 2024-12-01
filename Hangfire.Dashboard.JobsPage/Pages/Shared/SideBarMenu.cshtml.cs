@@ -28,6 +28,12 @@ namespace Hangfire.Dashboard.JobsPage.Pages
     #line default
     #line hidden
     
+    #line 6 "..\..\Pages\Shared\SideBarMenu.cshtml"
+    using Hangfire.Dashboard.JobsPage.resx;
+    
+    #line default
+    #line hidden
+    
     #line 4 "..\..\Pages\Shared\SideBarMenu.cshtml"
     using Hangfire.Dashboard.Pages;
     
@@ -49,11 +55,12 @@ WriteLiteral("\r\n\r\n");
 
 
 
+
 WriteLiteral("\r\n\r\n<ul class=\"nav nav-tabs hidden-md hidden-lg\">\r\n");
 
 
             
-            #line 10 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 11 "..\..\Pages\Shared\SideBarMenu.cshtml"
      foreach (var item in Items)
     {
         var itemValue = item(this);
@@ -66,7 +73,7 @@ WriteLiteral("        <li role=\"presentation\" class=\"");
 
 
             
-            #line 14 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 15 "..\..\Pages\Shared\SideBarMenu.cshtml"
                                   Write(activeClass);
 
             
@@ -76,7 +83,7 @@ WriteLiteral("\">\r\n            <a href=\"");
 
 
             
-            #line 15 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 16 "..\..\Pages\Shared\SideBarMenu.cshtml"
                 Write(itemValue.Url);
 
             
@@ -86,7 +93,7 @@ WriteLiteral("\">\r\n                ");
 
 
             
-            #line 16 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 17 "..\..\Pages\Shared\SideBarMenu.cshtml"
            Write(itemValue.Text);
 
             
@@ -97,7 +104,7 @@ WriteLiteral("\r\n                <span class=\"pull-right\">\r\n               
 
 
             
-            #line 21 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 22 "..\..\Pages\Shared\SideBarMenu.cshtml"
     }
 
             
@@ -108,7 +115,7 @@ WriteLiteral("\r\n</ul>\r\n\r\n<ul class=\"nav nav-pills nav-stacked visible-md-
 
 
             
-            #line 27 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 28 "..\..\Pages\Shared\SideBarMenu.cshtml"
      foreach (var item in Items)
     {
         var itemValue = item(this);
@@ -121,7 +128,7 @@ WriteLiteral("        <li role=\"presentation\" class=\"");
 
 
             
-            #line 31 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 32 "..\..\Pages\Shared\SideBarMenu.cshtml"
                                   Write(activeClass);
 
             
@@ -131,7 +138,7 @@ WriteLiteral("\">\r\n            <a href=\"");
 
 
             
-            #line 32 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 33 "..\..\Pages\Shared\SideBarMenu.cshtml"
                 Write(itemValue.Url);
 
             
@@ -141,7 +148,7 @@ WriteLiteral("\">\r\n                ");
 
 
             
-            #line 33 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 34 "..\..\Pages\Shared\SideBarMenu.cshtml"
            Write(itemValue.Text);
 
             
@@ -152,7 +159,7 @@ WriteLiteral("\r\n                <span class=\"pull-right\">\r\n               
 
 
             
-            #line 38 "..\..\Pages\Shared\SideBarMenu.cshtml"
+            #line 39 "..\..\Pages\Shared\SideBarMenu.cshtml"
     }
 
             

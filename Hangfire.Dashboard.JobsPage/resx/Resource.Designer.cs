@@ -135,6 +135,123 @@ namespace Hangfire.Dashboard.JobsPage.resx {
         /// <summary>
         ///   查找类似 and runs once every 的本地化字符串。
         /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_AndRunsOnceEvery {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_AndRunsOnceEvery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Assigned 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_Assigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_Assigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Daily (Permitted wildcard character[, - * /]) 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_EveryDay {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_EveryDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please select the day type you want to assign 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_SelectDayType {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_SelectDayType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start to begin at 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_StartToBeginAt {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_StartToBeginAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Time range is from 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Day_TimeRangeIsFrom {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Day_TimeRangeIsFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 and runs once every 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_AndRunsOnceEvery {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_AndRunsOnceEvery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Assigned 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_Assigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_Assigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Every hour (Permitted wildcard character[, - * /]) 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_EveryHour {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_EveryHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 hours 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_Hours {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please select the hour type you want to assign 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_SelectHourType {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_SelectHourType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start to begin at 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_StartToBeginAt {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_StartToBeginAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Time range is from 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Hour_TimeRangeIsFrom {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Hour_TimeRangeIsFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 and runs once every 的本地化字符串。
+        /// </summary>
         internal static string CronJobsPage_Tabpanel_Minute_AndRunsOnceEvery {
             get {
                 return ResourceManager.GetString("CronJobsPage_Tabpanel_Minute_AndRunsOnceEvery", resourceCulture);
@@ -187,11 +304,182 @@ namespace Hangfire.Dashboard.JobsPage.resx {
         }
         
         /// <summary>
+        ///   查找类似 and runs once every 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_AndRunsOnceEvery {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_AndRunsOnceEvery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Assigned 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_Assigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_Assigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Monthly (Permitted wildcard character[, - * /]) 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_EveryMonth {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_EveryMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please select the month type you want to assign 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_SelectMonthType {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_SelectMonthType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start to begin at 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_StartToBeginAt {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_StartToBeginAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Time range is from 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Month_TimeRangeIsFrom {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Month_TimeRangeIsFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Result 的本地化字符串。
         /// </summary>
         internal static string CronJobsPage_Tabpanel_Result {
             get {
                 return ResourceManager.GetString("CronJobsPage_Tabpanel_Result", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Assigned 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_Assigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_Assigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 and the day of the week is 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_DayOfWeekIs {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_DayOfWeekIs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Weekly (Permitted wildcard character[, - * /]) 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_EveryWeek {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_EveryWeek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please select the week type you want to assign 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_SelectWeekType {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_SelectWeekType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Start to run at the 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_StartToRunAt {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_StartToRunAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Time range is from 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_TimeRangeIsFrom {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_TimeRangeIsFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 week 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Week_Weeks {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Week_Weeks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Wildcard allowed per year [, - * /] 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_AllowedWildcard {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_AllowedWildcard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Specified 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_Assigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_Assigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Cycle from 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_CycleFrom {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_CycleFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Not specify 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_NotAssigned {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_NotAssigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select specified year ... 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_SelectYear {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_SelectYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 year 的本地化字符串。
+        /// </summary>
+        internal static string CronJobsPage_Tabpanel_Year_Year {
+            get {
+                return ResourceManager.GetString("CronJobsPage_Tabpanel_Year_Year", resourceCulture);
             }
         }
         
@@ -210,6 +498,15 @@ namespace Hangfire.Dashboard.JobsPage.resx {
         internal static string CronJobsPage_TabTitle_CronExpressionAnalysis {
             get {
                 return ResourceManager.GetString("CronJobsPage_TabTitle_CronExpressionAnalysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Days 的本地化字符串。
+        /// </summary>
+        internal static string Days {
+            get {
+                return ResourceManager.GetString("Days", resourceCulture);
             }
         }
         
@@ -349,6 +646,33 @@ namespace Hangfire.Dashboard.JobsPage.resx {
         }
         
         /// <summary>
+        ///   查找类似 Months 的本地化字符串。
+        /// </summary>
+        internal static string Months {
+            get {
+                return ResourceManager.GetString("Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select a page from the menu on the left to see the jobs available. 的本地化字符串。
+        /// </summary>
+        internal static string PageDescriptionLeft {
+            get {
+                return ResourceManager.GetString("PageDescriptionLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select a page from the tabs at the top to see the jobs available. 的本地化字符串。
+        /// </summary>
+        internal static string PageDescriptionTop {
+            get {
+                return ResourceManager.GetString("PageDescriptionTop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Task type 的本地化字符串。
         /// </summary>
         internal static string TaskType {
@@ -372,6 +696,24 @@ namespace Hangfire.Dashboard.JobsPage.resx {
         internal static string VerifyInfo_Required {
             get {
                 return ResourceManager.GetString("VerifyInfo_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Weeks 的本地化字符串。
+        /// </summary>
+        internal static string Weeks {
+            get {
+                return ResourceManager.GetString("Weeks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Years 的本地化字符串。
+        /// </summary>
+        internal static string Years {
+            get {
+                return ResourceManager.GetString("Years", resourceCulture);
             }
         }
     }

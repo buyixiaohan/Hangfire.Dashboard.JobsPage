@@ -15,6 +15,7 @@ namespace Hangfire.Dashboard.JobsPage
         }
         public static void UseManagementPages(this IGlobalConfiguration config, Assembly assembly)
         {
+
             JobsHelper.GetAllJobs(assembly);
             CreateManagement();
         }
@@ -29,11 +30,6 @@ namespace Hangfire.Dashboard.JobsPage
 
         private static void CreateManagement()
         {
-            #region 翻译
-
-            var resourceManager = Hangfire.Dashboard.Resources.Strings.ResourceManager;
-
-            #endregion 翻译
 
             var pageSet = new List<string>();
             foreach (var menu in JobsHelper.ManagementPageAttrs)

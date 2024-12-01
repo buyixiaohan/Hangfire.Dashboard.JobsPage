@@ -1,11 +1,10 @@
 ﻿using Hangfire.Annotations;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Hangfire.Dashboard.JobsPage.Pages
 {
-    partial class SideBarMenu
+    internal partial class SideBarMenu
     {
         public SideBarMenu([NotNull] IEnumerable<Func<RazorPage, MenuItem>> items)
         {

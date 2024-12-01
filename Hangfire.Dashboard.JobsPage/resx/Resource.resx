@@ -222,4 +222,124 @@
   <data name="CronJobsPage_Tabpanel_Result" xml:space="preserve">
     <value>Result</value>
   </data>
+  <data name="CronJobsPage_Tabpanel_Hour_EveryHour" xml:space="preserve">
+    <value>Every hour (Permitted wildcard character[, - * /])</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_TimeRangeIsFrom" xml:space="preserve">
+    <value>Time range is from</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_StartToBeginAt" xml:space="preserve">
+    <value>Start to begin at</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_AndRunsOnceEvery" xml:space="preserve">
+    <value>and runs once every</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_Hours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_Assigned" xml:space="preserve">
+    <value>Assigned</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Hour_SelectHourType" xml:space="preserve">
+    <value>Please select the hour type you want to assign</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_EveryDay">
+    <value>Daily (Permitted wildcard character[, - * /])</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_TimeRangeIsFrom">
+    <value>Time range is from</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_StartToBeginAt">
+    <value>Start to begin at</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_AndRunsOnceEvery">
+    <value>and runs once every</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_Assigned">
+    <value>Assigned</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Day_SelectDayType">
+    <value>Please select the day type you want to assign</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_EveryMonth">
+    <value>Monthly (Permitted wildcard character[, - * /])</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_TimeRangeIsFrom">
+    <value>Time range is from</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_StartToBeginAt">
+    <value>Start to begin at</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_AndRunsOnceEvery">
+    <value>and runs once every</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_Assigned">
+    <value>Assigned</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Month_SelectMonthType">
+    <value>Please select the month type you want to assign</value>
+  </data>
+
+  <data name="Days">
+    <value>Days</value>
+  </data>
+
+  <data name="Months">
+    <value>Months</value>
+  </data>
+   <data name="CronJobsPage_Tabpanel_Week_EveryWeek">
+    <value>Weekly (Permitted wildcard character[, - * /])</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_TimeRangeIsFrom">
+    <value>Time range is from</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_Weeks">
+    <value>week</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_StartToRunAt">
+    <value>Start to run at the</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_DayOfWeekIs">
+    <value>and the day of the week is</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_Assigned">
+    <value>Assigned</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Week_SelectWeekType">
+    <value>Please select the week type you want to assign</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_AllowedWildcard">
+    <value>Wildcard allowed per year [, - * /]</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_NotAssigned">
+    <value>Not specify</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_CycleFrom">
+    <value>Cycle from</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_Year">
+    <value>year</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_Assigned">
+    <value>Specified</value>
+  </data>
+  <data name="CronJobsPage_Tabpanel_Year_SelectYear">
+    <value>Select specified year ...</value>
+  </data>
+  <data name="Weeks">
+    <value>Weeks</value>
+  </data>
+
+  <data name="Years">
+    <value>Years</value>
+  </data>
+  
+
+<data name="PageDescriptionLeft" xml:space="preserve">
+  <value>Select a page from the menu on the left to see the jobs available.</value>
+</data>
+<data name="PageDescriptionTop" xml:space="preserve">
+  <value>Select a page from the tabs at the top to see the jobs available.</value>
+</data>
+
 </root>

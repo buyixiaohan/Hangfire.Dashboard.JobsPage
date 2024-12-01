@@ -11,6 +11,7 @@ namespace Hangfire.Dashboard.JobsPage.Pages
         {
             if (items == null) throw new ArgumentNullException(nameof(items));
             Items = items;
+
         }
 
         public IEnumerable<Func<RazorPage, MenuItem>> Items { get; }

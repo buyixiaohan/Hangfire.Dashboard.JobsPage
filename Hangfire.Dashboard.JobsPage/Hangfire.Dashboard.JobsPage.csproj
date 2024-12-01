@@ -4,7 +4,7 @@
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<IsPackable>true</IsPackable>
 		<PackageOutputPath>artifacts</PackageOutputPath>
-		<PackageId>Hangfire.Dashboard.JobsPage</PackageId>
+		<PackageId>JobsPages4Hangfire.Dashboard</PackageId>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<IncludeContentInPack>true</IncludeContentInPack>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -49,6 +49,10 @@
 		<None Remove="Properties\**" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Compile Remove="Language\CustomHangfireLanguage.cs" />
+	  <Compile Remove="Pages\CustomSidebarMenu.cs" />
+	</ItemGroup>
+	<ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="Content\cron.js" />
     <None Remove="Content\inputmask_min.css" />
@@ -60,8 +64,6 @@
     <None Remove="LICENSE.md" />
     <None Remove="management.PNG" />
     <None Remove="Pages\CronJobsPage.cs.bak" />
-    <None Remove="Pages\CronJobsPage.cshtml" />
-    <None Remove="Pages\ManagementPage.cshtml" />
 
 		<EmbeddedResource Include="Content\cron.js">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -116,7 +118,16 @@
 		<None Include=".\..\LICENSE.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 	<ItemGroup>
-		
+		<Compile Update="Pages\Shared\SideBarMenu.cshtml.cs">
+			<DependentUpon>SideBarMenu.cshtml</DependentUpon>
+		</Compile>
+		<Compile Update="Pages\Shared\CronJobsPage.cshtml.cs">
+			<DependentUpon>CronJobsPage.cshtml</DependentUpon>
+		</Compile>
+		<Compile Update="Pages\ManagementPage.cshtml.cs">
+			<DependentUpon>ManagementPage.cshtml</DependentUpon>
+		</Compile>
+
 		<Compile Update="resx\Resource.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
@@ -133,6 +144,7 @@
 
 	<ItemGroup>
 	  <Folder Include="artifacts\" />
+	  <Folder Include="Language\" />
 	</ItemGroup>
 
 
