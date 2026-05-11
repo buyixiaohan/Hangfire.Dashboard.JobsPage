@@ -342,4 +342,214 @@
   <value>Select a page from the tabs at the top to see the jobs available.</value>
 </data>
 
+  <data name="Annually" xml:space="preserve">
+    <value>Annually</value>
+  </data>
+  <data name="Client_ErrorTitle" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Client_TaskCreatedMessage" xml:space="preserve">
+    <value>A Task has been created.</value>
+  </data>
+  <data name="Client_TaskCreatedTitle" xml:space="preserve">
+    <value>Task Created!</value>
+  </data>
+  <data name="Client_UnknownError" xml:space="preserve">
+    <value>Unknown Error</value>
+  </data>
+  <data name="Client_ViewJob" xml:space="preserve">
+    <value>View Job</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Confirm_UpdateSchedule" xml:space="preserve">
+    <value>If this job already has a schedule then it will be updated. Continue?</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="Error_NoCronExpressionDefined" xml:space="preserve">
+    <value>No Cron Expression Defined</value>
+  </data>
+  <data name="Error_NoDelayDefined" xml:space="preserve">
+    <value>No Delay Defined</value>
+  </data>
+  <data name="Error_NoJobNameDefined" xml:space="preserve">
+    <value>No Job Name Defined</value>
+  </data>
+  <data name="Error_NoScheduleDefined" xml:space="preserve">
+    <value>No Schedule Defined</value>
+  </data>
+  <data name="Error_UnableToParseDelay" xml:space="preserve">
+    <value>Unable to parse Delay</value>
+  </data>
+  <data name="Error_UnableToParseSchedule" xml:space="preserve">
+    <value>Unable to parse Schedule</value>
+  </data>
+  <data name="EveryMinute" xml:space="preserve">
+    <value>Every Minute</value>
+  </data>
+  <data name="Hourly" xml:space="preserve">
+    <value>Hourly</value>
+  </data>
+  <data name="JobName" xml:space="preserve">
+    <value>Job Name</value>
+  </data>
+  <data name="JobName_TitleTip" xml:space="preserve">
+    <value>Give a unique name to your job</value>
+  </data>
+  <data name="ManagementPage_Title" xml:space="preserve">
+    <value>Job Management</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Queuing" xml:space="preserve">
+    <value>Queuing</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>{0} seconds</value>
+  </data>
+  <data name="SelectValue" xml:space="preserve">
+    <value>Select a value</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+  <data name="Manual_Title" xml:space="preserve">
+    <value>Job Management Guide</value>
+  </data>
+  <data name="Manual_Overview_Title" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Manual_Overview_Lead" xml:space="preserve">
+    <value>This page provides Hangfire job management actions for immediate, scheduled, delayed, and recurring execution.</value>
+  </data>
+  <data name="Manual_Overview_Intro" xml:space="preserve">
+    <value>You can use the management pages to perform these actions:</value>
+  </data>
+  <data name="Manual_Action_Immediate" xml:space="preserve">
+    <value>Queue a job for immediate execution</value>
+  </data>
+  <data name="Manual_Action_Scheduled" xml:space="preserve">
+    <value>Schedule a job for a specific date and time</value>
+  </data>
+  <data name="Manual_Action_Delayed" xml:space="preserve">
+    <value>Delay a job for a specified interval</value>
+  </data>
+  <data name="Manual_Action_Recurring" xml:space="preserve">
+    <value>Create or update a recurring job</value>
+  </data>
+  <data name="Manual_Steps_Title" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Manual_Immediate_Title" xml:space="preserve">
+    <value>Immediate execution</value>
+  </data>
+  <data name="Manual_Immediate_Description" xml:space="preserve">
+    <value>Immediate execution queues the selected job right away.</value>
+  </data>
+  <data name="Manual_Immediate_Step1" xml:space="preserve">
+    <value>Open the target job panel and select the immediate execution action.</value>
+  </data>
+  <data name="Manual_Immediate_Step2" xml:space="preserve">
+    <value>Submit the job and use the returned link to view the created Hangfire job.</value>
+  </data>
+  <data name="Manual_Example_Label" xml:space="preserve">
+    <value>Example:</value>
+  </data>
+  <data name="Manual_Immediate_ImageAlt" xml:space="preserve">
+    <value>Immediate execution example</value>
+  </data>
+  <data name="Manual_Scheduled_Title" xml:space="preserve">
+    <value>Scheduled execution</value>
+  </data>
+  <data name="Manual_Scheduled_Description" xml:space="preserve">
+    <value>Scheduled execution queues the selected job for a specific date and time.</value>
+  </data>
+  <data name="Manual_Scheduled_Step1" xml:space="preserve">
+    <value>Open the target job panel and select the scheduled execution action.</value>
+  </data>
+  <data name="Manual_Scheduled_Step2" xml:space="preserve">
+    <value>Choose the date and time when the job should run.</value>
+  </data>
+  <data name="Manual_Scheduled_Step3" xml:space="preserve">
+    <value>Submit the job to create a scheduled Hangfire job.</value>
+  </data>
+  <data name="Manual_Scheduled_ImageAlt" xml:space="preserve">
+    <value>Scheduled execution example</value>
+  </data>
+  <data name="Manual_Delayed_Title" xml:space="preserve">
+    <value>Delayed execution</value>
+  </data>
+  <data name="Manual_Delayed_Description" xml:space="preserve">
+    <value>Delayed execution queues the selected job after the configured interval.</value>
+  </data>
+  <data name="Manual_Delayed_Step1" xml:space="preserve">
+    <value>Open the target job panel and select the delayed execution action.</value>
+  </data>
+  <data name="Manual_Delayed_Step2" xml:space="preserve">
+    <value>Select a preset delay or enter a custom time span.</value>
+  </data>
+  <data name="Manual_Delayed_Step3" xml:space="preserve">
+    <value>Submit the job to create a delayed Hangfire job.</value>
+  </data>
+  <data name="Manual_Delayed_ImageAlt" xml:space="preserve">
+    <value>Delayed execution example</value>
+  </data>
+  <data name="Manual_Recurring_Title" xml:space="preserve">
+    <value>Recurring execution</value>
+  </data>
+  <data name="Manual_Recurring_Description" xml:space="preserve">
+    <value>Recurring execution creates or updates a Hangfire recurring job from a Cron expression.</value>
+  </data>
+  <data name="Manual_Recurring_Step1" xml:space="preserve">
+    <value>Open the target job panel and select the recurring execution action.</value>
+  </data>
+  <data name="Manual_Recurring_Step2" xml:space="preserve">
+    <value>Enter a valid Cron expression or use the Cron expression builder.</value>
+  </data>
+  <data name="Manual_Recurring_Step3" xml:space="preserve">
+    <value>Submit the job to create or update the recurring schedule.</value>
+  </data>
+  <data name="Manual_Recurring_ImageAlt" xml:space="preserve">
+    <value>Recurring execution example</value>
+  </data>
+  <data name="Manual_Faq_Title" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Manual_Faq_Status_Q" xml:space="preserve">
+    <value>Q1: How do I view job status?</value>
+  </data>
+  <data name="Manual_Faq_Status_A" xml:space="preserve">
+    <value>Use Hangfire Dashboard to view job status, history, and failure details.</value>
+  </data>
+  <data name="Manual_Faq_Failure_Q" xml:space="preserve">
+    <value>Q2: What happens when a job fails?</value>
+  </data>
+  <data name="Manual_Faq_Failure_A" xml:space="preserve">
+    <value>Hangfire applies its configured retry policy. Failed jobs can be inspected from the Dashboard.</value>
+  </data>
+  <data name="Manual_Faq_UpdateSchedule_Q" xml:space="preserve">
+    <value>Q3: How do I update a recurring schedule?</value>
+  </data>
+  <data name="Manual_Faq_UpdateSchedule_A" xml:space="preserve">
+    <value>Submit the recurring action again with the same job name or job id and the new Cron expression.</value>
+  </data>
+  <data name="Manual_Faq_Delay_Q" xml:space="preserve">
+    <value>Q4: Why can scheduled jobs run late?</value>
+  </data>
+  <data name="Manual_Faq_Delay_A" xml:space="preserve">
+    <value>Execution can be affected by worker availability, server load, polling intervals, and storage latency.</value>
+  </data>
+  <data name="Manual_Faq_Delete_Q" xml:space="preserve">
+    <value>Q5: How do I delete a recurring job?</value>
+  </data>
+  <data name="Manual_Faq_Delete_A" xml:space="preserve">
+    <value>Use the Hangfire Dashboard recurring jobs page or remove the recurring job through Hangfire APIs.</value>
+  </data>
 </root>

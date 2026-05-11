@@ -13,79 +13,93 @@ namespace JobsPages4Hangfire.Dashboard.Support
     {
         public static List<JobMetadata> JobMetadatas { get; private set; } = new List<JobMetadata>();
         internal static List<ManagementPageAttribute> ManagementPageAttrs { get; set; } = new List<ManagementPageAttribute>();
+        private static readonly object SyncRoot = new object();
 
         internal static void GetAllJobs(Assembly assembly)
         {
-            foreach (Type ti in assembly.GetTypes().Where(x => typeof(IJob).IsAssignableFrom(x) && x.Name != (typeof(IJob).Name)))
+            if (assembly == null)
             {
-                var q = "default";
+                throw new ArgumentNullException(nameof(assembly));
+            }
 
-                if (ti.GetCustomAttributes(true).OfType<ManagementPageAttribute>().Any())
+            lock (SyncRoot)
+            {
+                foreach (Type ti in assembly.GetTypes().Where(x => typeof(IJob).IsAssignableFrom(x) && x.Name != (typeof(IJob).Name)))
                 {
-                    var mgmtPageAttr = ti.GetCustomAttribute<ManagementPageAttribute>();
-                    //用code做路由，空则不使用
-                    if (mgmtPageAttr != null && !string.IsNullOrEmpty(mgmtPageAttr.MenuCode))
+                    var q = "default";
+
+                    if (ti.GetCustomAttributes(true).OfType<ManagementPageAttribute>().Any())
                     {
-
-                        if (string.IsNullOrEmpty(mgmtPageAttr.Desc))
+                        var mgmtPageAttr = ti.GetCustomAttribute<ManagementPageAttribute>();
+                        //用code做路由，空则不使用
+                        if (mgmtPageAttr != null && !string.IsNullOrEmpty(mgmtPageAttr.MenuCode))
                         {
 
-                            if (ti.GetCustomAttributes(true).OfType<DescriptionAttribute>().Any())
+                            if (string.IsNullOrEmpty(mgmtPageAttr.Desc))
                             {
-                                mgmtPageAttr.Desc = ti.GetCustomAttribute<DescriptionAttribute>().Description;
 
+                                if (ti.GetCustomAttributes(true).OfType<DescriptionAttribute>().Any())
+                                {
+                                    mgmtPageAttr.Desc = ti.GetCustomAttribute<DescriptionAttribute>().Description;
+
+                                }
+                            }
+                            if (!ManagementPageAttrs.Any(x => x.MenuCode == mgmtPageAttr.MenuCode))
+                            {
+                                ManagementPageAttrs.Add(mgmtPageAttr);
+                            }
+
+                            foreach (var methodInfo in ti.GetMethods().Where(m => m.DeclaringType == ti))
+                            {
+                                var meta = new JobMetadata
+                                {
+                                    Type = ti,
+                                    Queue = q,
+                                    SectionTitle = mgmtPageAttr.Title,
+                                    MenuName = mgmtPageAttr.MenuName,
+                                    MenuCode = mgmtPageAttr.MenuCode,
+                                };
+
+
+                                meta.MethodInfo = methodInfo;
+
+                                if (JobMetadatas.Any(x => x.Type == meta.Type && x.MethodInfo == meta.MethodInfo && x.MenuCode == meta.MenuCode))
+                                {
+                                    continue;
+                                }
+
+                                if (methodInfo.GetCustomAttributes(true).OfType<QueueAttribute>().Any())
+                                {
+                                    meta.Queue = methodInfo.GetCustomAttribute<QueueAttribute>().Queue;
+                                }
+
+                                if (methodInfo.GetCustomAttributes(true).OfType<DescriptionAttribute>().Any())
+                                {
+                                    meta.Description = methodInfo.GetCustomAttribute<DescriptionAttribute>().Description;
+                                }
+
+                                if (methodInfo.GetCustomAttributes(true).OfType<DisplayNameAttribute>().Any())
+                                {
+                                    meta.DisplayName = methodInfo.GetCustomAttribute<DisplayNameAttribute>().DisplayName;
+                                }
+
+                                if (methodInfo.GetCustomAttributes(true).OfType<AllowMultipleAttribute>().Any())
+                                {
+                                    meta.AllowMultiple = methodInfo.GetCustomAttribute<AllowMultipleAttribute>().AllowMultiple;
+                                }
+                                if (methodInfo.GetCustomAttributes(true).OfType<JobDisplayNameAttribute>().Any())
+                                {
+                                    meta.JobName = methodInfo.GetCustomAttribute<JobDisplayNameAttribute>().DisplayName;
+                                }
+
+                                JobMetadatas.Add(meta);
                             }
                         }
-                        if (!ManagementPageAttrs.Any(x => x.MenuCode == mgmtPageAttr.MenuCode))
-                        {
-                            ManagementPageAttrs.Add(mgmtPageAttr);
-                        }
 
-                        foreach (var methodInfo in ti.GetMethods().Where(m => m.DeclaringType == ti))
-                        {
-                            var meta = new JobMetadata
-                            {
-                                Type = ti,
-                                Queue = q,
-                                SectionTitle = mgmtPageAttr.Title,
-                                MenuName = mgmtPageAttr.MenuName,
-                                MenuCode = mgmtPageAttr.MenuCode,
-                            };
-
-
-                            meta.MethodInfo = methodInfo;
-
-                            if (methodInfo.GetCustomAttributes(true).OfType<QueueAttribute>().Any())
-                            {
-                                meta.Queue = methodInfo.GetCustomAttribute<QueueAttribute>().Queue;
-                            }
-
-                            if (methodInfo.GetCustomAttributes(true).OfType<DescriptionAttribute>().Any())
-                            {
-                                meta.Description = methodInfo.GetCustomAttribute<DescriptionAttribute>().Description;
-                            }
-
-                            if (methodInfo.GetCustomAttributes(true).OfType<DisplayNameAttribute>().Any())
-                            {
-                                meta.DisplayName = methodInfo.GetCustomAttribute<DisplayNameAttribute>().DisplayName;
-                            }
-
-                            if (methodInfo.GetCustomAttributes(true).OfType<AllowMultipleAttribute>().Any())
-                            {
-                                meta.AllowMultiple = methodInfo.GetCustomAttribute<AllowMultipleAttribute>().AllowMultiple;
-                            }
-                            if (methodInfo.GetCustomAttributes(true).OfType<JobDisplayNameAttribute>().Any())
-                            {
-                                meta.JobName = methodInfo.GetCustomAttribute<JobDisplayNameAttribute>().DisplayName;
-                            }
-
-                            JobMetadatas.Add(meta);
-                        }
                     }
 
+
                 }
-
-
             }
         }
         public static List<string> GetAllQueues()

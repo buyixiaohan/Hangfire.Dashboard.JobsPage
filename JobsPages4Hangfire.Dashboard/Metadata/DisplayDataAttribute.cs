@@ -59,7 +59,7 @@ namespace JobsPages4Hangfire.Dashboard.Metadata
 			this.DefaultValue = defaultValue;
 			this.CssClasses = cssClasses;
 			this.IsDisabled = isDisabled;
-			this.IsRequired = IsRequired;
+			this.IsRequired = isRequired;
 		}
 	}
 }

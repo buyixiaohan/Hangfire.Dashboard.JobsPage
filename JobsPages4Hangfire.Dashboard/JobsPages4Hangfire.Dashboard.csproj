@@ -64,6 +64,7 @@
 		<None Remove="LICENSE.md" />
 		<None Remove="management.PNG" />
 		<None Remove="Pages\CronJobsPage.cs.bak" />
+		<None Remove="wwwroot\images\**" />
 
 		<EmbeddedResource Include="Content\cron.js">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -84,6 +85,9 @@
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 		<EmbeddedResource Include="Content\Libraries\inputmask\jquery.inputmask.bundle.min.js">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="wwwroot\images\**\*.*">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</EmbeddedResource>
 	</ItemGroup>
@@ -123,6 +127,9 @@
 		</Compile>
 		<Compile Update="Pages\ManagementPage.cshtml.cs">
 			<DependentUpon>ManagementPage.cshtml</DependentUpon>
+		</Compile>
+		<Compile Update="Pages\ManagementJobsPage.cshtml.cs">
+			<DependentUpon>ManagementJobsPage.cshtml</DependentUpon>
 		</Compile>
 
 		<Compile Update="resx\Resource.Designer.cs">

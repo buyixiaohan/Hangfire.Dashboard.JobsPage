@@ -21,7 +21,7 @@ namespace JobsPages4Hangfire.Dashboard.Metadata
         public MethodInfo MethodInfo { get; set; }
 
         public string MethodName => Type.Name + "_" + MethodInfo.Name;
-        public string JobId => $"{MenuCode}/{JobName.ScrubURL()}";
+        public string JobId => $"{MenuCode}/{(JobName ?? MethodName).ScrubURL()}";
         public string Name => $"{DisplayName ?? MethodName}";
 
 

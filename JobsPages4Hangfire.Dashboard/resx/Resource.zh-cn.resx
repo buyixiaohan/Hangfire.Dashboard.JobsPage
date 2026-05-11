@@ -338,4 +338,214 @@
   <value>再上方选择需要管理的任务</value>
 </data>
 
+  <data name="Annually" xml:space="preserve">
+    <value>每年</value>
+  </data>
+  <data name="Client_ErrorTitle" xml:space="preserve">
+    <value>错误！</value>
+  </data>
+  <data name="Client_TaskCreatedMessage" xml:space="preserve">
+    <value>任务已创建。</value>
+  </data>
+  <data name="Client_TaskCreatedTitle" xml:space="preserve">
+    <value>任务已创建！</value>
+  </data>
+  <data name="Client_UnknownError" xml:space="preserve">
+    <value>未知错误</value>
+  </data>
+  <data name="Client_ViewJob" xml:space="preserve">
+    <value>查看任务</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Confirm_UpdateSchedule" xml:space="preserve">
+    <value>如果该任务已有计划，将会更新现有计划。是否继续？</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="Error_NoCronExpressionDefined" xml:space="preserve">
+    <value>未设置 Cron 表达式</value>
+  </data>
+  <data name="Error_NoDelayDefined" xml:space="preserve">
+    <value>未设置延迟时间</value>
+  </data>
+  <data name="Error_NoJobNameDefined" xml:space="preserve">
+    <value>未设置任务名称</value>
+  </data>
+  <data name="Error_NoScheduleDefined" xml:space="preserve">
+    <value>未设置执行计划</value>
+  </data>
+  <data name="Error_UnableToParseDelay" xml:space="preserve">
+    <value>无法解析延迟时间</value>
+  </data>
+  <data name="Error_UnableToParseSchedule" xml:space="preserve">
+    <value>无法解析执行计划</value>
+  </data>
+  <data name="EveryMinute" xml:space="preserve">
+    <value>每分钟</value>
+  </data>
+  <data name="Hourly" xml:space="preserve">
+    <value>每小时</value>
+  </data>
+  <data name="JobName" xml:space="preserve">
+    <value>任务名称</value>
+  </data>
+  <data name="JobName_TitleTip" xml:space="preserve">
+    <value>为任务设置唯一名称</value>
+  </data>
+  <data name="ManagementPage_Title" xml:space="preserve">
+    <value>任务管理系统</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>每月</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Queuing" xml:space="preserve">
+    <value>提交中</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>{0} 秒</value>
+  </data>
+  <data name="SelectValue" xml:space="preserve">
+    <value>请选择</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>每周</value>
+  </data>
+  <data name="Manual_Title" xml:space="preserve">
+    <value>任务管理操作手册</value>
+  </data>
+  <data name="Manual_Overview_Title" xml:space="preserve">
+    <value>任务管理概述</value>
+  </data>
+  <data name="Manual_Overview_Lead" xml:space="preserve">
+    <value>本页面提供 Hangfire 任务管理操作，支持立即执行、定时执行、延时执行和循环执行。</value>
+  </data>
+  <data name="Manual_Overview_Intro" xml:space="preserve">
+    <value>您可以通过任务管理页面执行以下操作：</value>
+  </data>
+  <data name="Manual_Action_Immediate" xml:space="preserve">
+    <value>立即将任务加入队列执行</value>
+  </data>
+  <data name="Manual_Action_Scheduled" xml:space="preserve">
+    <value>将任务安排到指定日期和时间执行</value>
+  </data>
+  <data name="Manual_Action_Delayed" xml:space="preserve">
+    <value>按指定延迟时间执行任务</value>
+  </data>
+  <data name="Manual_Action_Recurring" xml:space="preserve">
+    <value>创建或更新循环任务</value>
+  </data>
+  <data name="Manual_Steps_Title" xml:space="preserve">
+    <value>操作步骤</value>
+  </data>
+  <data name="Manual_Immediate_Title" xml:space="preserve">
+    <value>立即执行任务</value>
+  </data>
+  <data name="Manual_Immediate_Description" xml:space="preserve">
+    <value>立即执行会立刻将所选任务加入 Hangfire 队列。</value>
+  </data>
+  <data name="Manual_Immediate_Step1" xml:space="preserve">
+    <value>打开目标任务面板，并选择立即执行操作。</value>
+  </data>
+  <data name="Manual_Immediate_Step2" xml:space="preserve">
+    <value>提交任务后，可通过返回的链接查看已创建的 Hangfire 任务。</value>
+  </data>
+  <data name="Manual_Example_Label" xml:space="preserve">
+    <value>示例：</value>
+  </data>
+  <data name="Manual_Immediate_ImageAlt" xml:space="preserve">
+    <value>立即执行任务示例</value>
+  </data>
+  <data name="Manual_Scheduled_Title" xml:space="preserve">
+    <value>定时执行任务</value>
+  </data>
+  <data name="Manual_Scheduled_Description" xml:space="preserve">
+    <value>定时执行会在指定日期和时间将所选任务加入队列。</value>
+  </data>
+  <data name="Manual_Scheduled_Step1" xml:space="preserve">
+    <value>打开目标任务面板，并选择定时执行操作。</value>
+  </data>
+  <data name="Manual_Scheduled_Step2" xml:space="preserve">
+    <value>选择任务需要执行的具体日期和时间。</value>
+  </data>
+  <data name="Manual_Scheduled_Step3" xml:space="preserve">
+    <value>提交任务以创建 Hangfire 定时任务。</value>
+  </data>
+  <data name="Manual_Scheduled_ImageAlt" xml:space="preserve">
+    <value>定时执行任务示例</value>
+  </data>
+  <data name="Manual_Delayed_Title" xml:space="preserve">
+    <value>延时执行任务</value>
+  </data>
+  <data name="Manual_Delayed_Description" xml:space="preserve">
+    <value>延时执行会在配置的时间间隔后将所选任务加入队列。</value>
+  </data>
+  <data name="Manual_Delayed_Step1" xml:space="preserve">
+    <value>打开目标任务面板，并选择延时执行操作。</value>
+  </data>
+  <data name="Manual_Delayed_Step2" xml:space="preserve">
+    <value>选择预设延迟时间，或输入自定义时间间隔。</value>
+  </data>
+  <data name="Manual_Delayed_Step3" xml:space="preserve">
+    <value>提交任务以创建 Hangfire 延时任务。</value>
+  </data>
+  <data name="Manual_Delayed_ImageAlt" xml:space="preserve">
+    <value>延时执行任务示例</value>
+  </data>
+  <data name="Manual_Recurring_Title" xml:space="preserve">
+    <value>循环执行任务</value>
+  </data>
+  <data name="Manual_Recurring_Description" xml:space="preserve">
+    <value>循环执行会根据 Cron 表达式创建或更新 Hangfire 循环任务。</value>
+  </data>
+  <data name="Manual_Recurring_Step1" xml:space="preserve">
+    <value>打开目标任务面板，并选择循环执行操作。</value>
+  </data>
+  <data name="Manual_Recurring_Step2" xml:space="preserve">
+    <value>输入有效的 Cron 表达式，或使用 Cron 表达式构建器。</value>
+  </data>
+  <data name="Manual_Recurring_Step3" xml:space="preserve">
+    <value>提交任务以创建或更新循环执行计划。</value>
+  </data>
+  <data name="Manual_Recurring_ImageAlt" xml:space="preserve">
+    <value>循环执行任务示例</value>
+  </data>
+  <data name="Manual_Faq_Title" xml:space="preserve">
+    <value>常见问题 (FAQ)</value>
+  </data>
+  <data name="Manual_Faq_Status_Q" xml:space="preserve">
+    <value>Q1: 如何查看当前任务的执行状态？</value>
+  </data>
+  <data name="Manual_Faq_Status_A" xml:space="preserve">
+    <value>可以通过 Hangfire Dashboard 查看任务状态、历史记录和失败详情。</value>
+  </data>
+  <data name="Manual_Faq_Failure_Q" xml:space="preserve">
+    <value>Q2: 如果任务执行失败，如何处理？</value>
+  </data>
+  <data name="Manual_Faq_Failure_A" xml:space="preserve">
+    <value>Hangfire 会按配置的重试策略处理失败任务。您可以在 Dashboard 中检查失败原因。</value>
+  </data>
+  <data name="Manual_Faq_UpdateSchedule_Q" xml:space="preserve">
+    <value>Q3: 如何修改循环任务的执行计划？</value>
+  </data>
+  <data name="Manual_Faq_UpdateSchedule_A" xml:space="preserve">
+    <value>使用相同任务名称或任务标识再次提交循环执行操作，并填写新的 Cron 表达式。</value>
+  </data>
+  <data name="Manual_Faq_Delay_Q" xml:space="preserve">
+    <value>Q4: 为什么定时任务有时会延迟执行？</value>
+  </data>
+  <data name="Manual_Faq_Delay_A" xml:space="preserve">
+    <value>执行时间可能受到 Worker 可用性、服务器负载、轮询间隔和存储延迟影响。</value>
+  </data>
+  <data name="Manual_Faq_Delete_Q" xml:space="preserve">
+    <value>Q5: 如何删除一个循环任务？</value>
+  </data>
+  <data name="Manual_Faq_Delete_A" xml:space="preserve">
+    <value>可以使用 Hangfire Dashboard 的循环任务页面，或通过 Hangfire API 删除循环任务。</value>
+  </data>
 </root>

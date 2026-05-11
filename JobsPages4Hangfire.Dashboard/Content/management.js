@@ -1,13 +1,24 @@
-﻿(function (hangfire) {
+(function (hangfire) {
 
     hangfire.Management = (function () {
+        var resources = hangfire.ManagementLocalization || {};
+
+        function text(key, fallback) {
+            return resources[key] || fallback;
+        }
+
         function Management() {
             this._initialize();
         }
         Management.prototype._initialize = function () {
 
             $("div[id$='_datetimepicker']").each(function () {
-                $(this).datetimepicker();
+                $(this).datetimepicker({
+                    format: "YYYY-MM-DD HH:mm:ss",
+                    showTodayButton: true,
+                    showClose: true,
+                    useCurrent: false
+                });
             });
 
             $('input.time').inputmask();
@@ -22,7 +33,6 @@
 
                     $(".commands-options", container).hide();
                     $(".commands-options." + commandsType, container).show();
-                    //data-commands-type="Enqueue" data-id="@(id)"
                     $(".commandsType." + id).html($("a[data-commands-type='" + commandsType + "']", container).html());
                 };
 
@@ -41,8 +51,8 @@
 
                         $button.data('selectedvalue', optionValue);
                         $button.find('.input-data-list-text').text(optionText);
-
                     });
+
                 $(this).on('click', '.commands-type',
                     function (e) {
                         var $this = $(this);
@@ -57,18 +67,17 @@
                         var id = $this.attr("input-id");
                         var cron = $("#" + id + "_sys_cron").val();
                         $("#result").val(cron || "* * * * *").data("cronId", id);
-                        $('#analysis').click()
-                        $('#cronModal').modal("show")
+                        $('#analysis').click();
+                        $('#cronModal').modal("show");
                         e.preventDefault();
                     });
 
                 $("#connExpressionOk").click(function () {
-
                     var id = $("#result").data("cronId");
                     var cron = $("#result").val();
                     $("#" + id + "_sys_cron").val(cron);
-                    $('#cronModal').modal("hide")
-                })
+                    $('#cronModal').modal("hide");
+                });
 
                 $(this).on('click', '.js-management-input-commands',
                     function (e) {
@@ -105,9 +114,9 @@
                             $this.button('loading');
 
                             $.post($this.data('url'), send, function (data) {
-                                Hangfire.Management.alertSuccess(id, "A Task has been created. <a href=\"" + data.jobLink + "\">View Job</a>");
+                                Hangfire.Management.alertSuccess(id, text("taskCreatedMessage", "A Task has been created.") + " <a href=\"" + data.jobLink + "\">" + text("viewJob", "View Job") + "</a>");
                             }).fail(function (xhr) {
-                                var error = 'Unknown Error';
+                                var error = text("unknownError", "Unknown Error");
 
                                 try {
                                     error = JSON.parse(xhr.responseText).errorMessage;
@@ -130,17 +139,21 @@
 
         Management.alertSuccess = function (id, message) {
             $('#' + id + '_success')
-                .html('<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><strong>Task Created! </strong><span>' +
+                .html('<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><strong>' +
+                    text("taskCreatedTitle", "Task Created!") +
+                    ' </strong><span>' +
                     message +
                     '</span></div>');
-        }
+        };
 
         Management.alertError = function (id, message) {
             $('#' + id + '_error')
-                .html('<div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>Error! </strong><span>' +
+                .html('<div class="alert alert-danger"><a class="close" data-dismiss="alert">×</a><strong>' +
+                    text("errorTitle", "Error!") +
+                    ' </strong><span>' +
                     message +
                     '</span></div>');
-        }
+        };
 
         return Management;
 

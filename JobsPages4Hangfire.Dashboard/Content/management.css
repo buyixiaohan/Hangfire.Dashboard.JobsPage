@@ -12,16 +12,69 @@
 	text-align: right;
 }
 
+.management-manual {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.management-manual,
+.management-manual * {
+	box-sizing: border-box;
+}
+
+.management-manual .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.management-manual [class^="col-"],
+.management-manual [class*=" col-"] {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100%;
+}
+
+.management-manual-image {
+	display: block;
+	max-width: 100%;
+	margin: 12px 0 0;
+	padding: 10px;
+	overflow: hidden;
+	background: #f8fafc;
+	border: 1px solid #d6dee8;
+	border-radius: 6px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .08);
+}
+
+.management-manual-image img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	max-height: 520px;
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid #e2e8f0;
+	border-radius: 4px;
+	background: #fff;
+}
+
 .panel-footer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
 }
 
 	.panel-footer .commands-options,
 	.panel-footer .commands-panel,
-	.panel-footer > .btn-group {
+	.panel-footer > .btn-group,
+	.panel-footer .management-command-type,
+	.panel-footer .management-command-input,
+	.panel-footer .management-command-action {
 		padding: 0;
+		float: none;
+		width: auto;
 	}
 
 		.panel-footer .commands-panel .btn-group,
@@ -34,12 +87,54 @@
 			float: left;
 		}
 
+		.panel-footer .management-command-type .dropdown-toggle {
+			min-width: 128px;
+			text-align: left;
+		}
+
+		.panel-footer .management-command-input {
+			flex: 0 1 auto;
+		}
+
+		.panel-footer .management-command-input-datetime {
+			width: 225px;
+		}
+
+		.panel-footer .management-command-input-delay {
+			width: 120px;
+		}
+
+		.panel-footer .management-command-input-cron {
+			width: 210px;
+		}
+
+		.panel-footer .management-command-input-name {
+			width: 160px;
+		}
+
+		.panel-footer .management-command-action {
+			flex: 0 0 auto;
+		}
+
 		.panel-footer .commands-panel.CronExpression ul {
 			width: 225px;
 		}
 
 		.panel-footer .commands-panel.CronExpression li > a > span {
 			font-family: monospace;
+		}
+
+		.panel-footer .commands-options.ScheduleDateTime,
+		.panel-footer .commands-panel.ScheduleDateTime {
+			padding-left: 0;
+		}
+
+		.panel-footer .commands-options.ScheduleDateTime .management-schedule-datetime {
+			max-width: 225px;
+		}
+
+		.panel-footer .commands-options.ScheduleDateTime input {
+			font-family: Consolas, "Courier New", monospace;
 		}
 
 /* Asterisk after the label text for required inputs*/
@@ -66,14 +161,37 @@ display:none;
 	}
 
 		.panel-footer .commands-options,
-		.panel-footer .commands-panel {
-			padding: 0 0 0 1em;
+		.panel-footer .commands-panel,
+		.panel-footer .management-command-input,
+		.panel-footer .management-command-action {
+			padding: 0;
 		}
 
 			.panel-footer .commands-panel > .btn-group,
 			.panel-footer .commands-panel > button {
-				float: right;
+				float: left;
 			}
+}
+
+@media (max-width:767px) {
+	.panel-footer .management-command-type,
+	.panel-footer .management-command-input,
+	.panel-footer .management-command-action {
+		width: 100%;
+	}
+
+	.panel-footer .management-command-input-datetime,
+	.panel-footer .management-command-input-delay,
+	.panel-footer .management-command-input-cron,
+	.panel-footer .management-command-input-name {
+		width: 100%;
+	}
+
+	.panel-footer .management-command-type .dropdown-toggle,
+	.panel-footer .management-command-action .btn,
+	.panel-footer .management-command-action .btn-group {
+		width: 100%;
+	}
 }
 
 @media (min-width:768px) and (max-width:992px) {

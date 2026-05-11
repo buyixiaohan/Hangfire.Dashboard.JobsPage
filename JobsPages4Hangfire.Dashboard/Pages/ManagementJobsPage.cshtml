@@ -1,0 +1,103 @@
+@* Generator: Template TypeVisibility: Internal GeneratePrettyNames: True Namespace: JobsPages4Hangfire.Dashboard.Pages *@
+@using Hangfire
+@using Hangfire.Dashboard.Pages
+@using JobsPages4Hangfire.Dashboard.Pages
+@using JobsPages4Hangfire.Dashboard.resx
+@inherits Hangfire.Dashboard.RazorPage
+
+@{
+    Layout = new LayoutPage(Model.MenuName);
+    var timeSpanItems = new Dictionary<string, string>() {
+        { string.Format(Resource.Seconds, 5), "0:0:5" },
+        { string.Format(Resource.Seconds, 10), "0:0:10" },
+        { string.Format(Resource.Seconds, 15), "0:0:15" },
+        { string.Format(Resource.Seconds, 30), "0:0:30" },
+        { string.Format(Resource.Seconds, 60), "0:1:0" }
+    };
+    var cronItems = new Dictionary<string, string>() {
+        { Resource.EveryMinute, Cron.Minutely() },
+        { Resource.Hourly, Cron.Hourly() },
+        { Resource.Daily, Cron.Daily() },
+        { Resource.Weekly, Cron.Weekly() },
+        { Resource.Monthly, Cron.Monthly() },
+        { Resource.Annually, Cron.Yearly() }
+    };
+    var loadingText = Resource.Queuing;
+}
+
+<div class="row">
+    <div class="col-md-3">
+        @Html.RenderPartial(new SideBarMenu(ManagementSidebarMenu.Items))
+    </div>
+    <div id="jobsAccordion" class="col-md-9 accordion job-panels">
+        @foreach (var modelSection in Model.Sections)
+        {
+            if (modelSection.ShowWrapper)
+            {
+                <div class="panel panel-info card wrapper-panel" data-id="section_@(modelSection.ScrubbedTitle)">
+                    <div id="section_heading_@(modelSection.ScrubbedTitle)" class="panel-heading card-header @(modelSection.Expanded ? "" : "collapsed")" role="button" data-toggle="collapse" data-parent="#jobsAccordion" data-target="#section_collapse_@(modelSection.ScrubbedTitle)" href="#section_collapse_@(modelSection.ScrubbedTitle)" aria-expanded="@(modelSection.Expanded ? "true" : "false")" aria-controls="section_collapse_@(modelSection.ScrubbedTitle)">
+                        <h4 class="panel-title">@modelSection.Title</h4>
+                    </div>
+                    <div id="section_collapse_@(modelSection.ScrubbedTitle)" class="panel-collapse @(modelSection.Expanded ? "collapse in" : "collapse")" aria-expanded="@(modelSection.Expanded ? "true" : "false")" aria-labelledby="section_heading_@(modelSection.ScrubbedTitle)" data-parent="#jobsAccordion">
+                        @foreach (var job in modelSection.Jobs)
+                        {
+                            @RenderJobMarkup(job, timeSpanItems, cronItems, loadingText)
+                        }
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h1 class="page-header single-section">@modelSection.Title</h1>
+                <p class="lead"> @Model.MenuDescription </p>
+                <div id="section_collapse_@(modelSection.ScrubbedTitle)" class="panel-collapse @(modelSection.Expanded ? "collapse in" : "collapse")" aria-expanded="@(modelSection.Expanded ? "true" : "false")" aria-labelledby="section_heading_@(modelSection.ScrubbedTitle)" data-parent="#jobsAccordion">
+                    @foreach (var job in modelSection.Jobs)
+                    {
+                        @RenderJobMarkup(job, timeSpanItems, cronItems, loadingText)
+                    }
+                </div>
+            }
+        }
+    </div>
+    <div class="modal fade" id="cronModal" tabindex="-1" role="dialog" aria-labelledby="cronModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="cronModalLabel">@Resource.JobManagementPage_TaskType_RepeatingExecution_Builder</h4>
+                </div>
+                <div class="modal-body">
+                    @Html.RenderPartial(new CronJobsPage())
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">@Resource.Close</button>
+                    <button type="button" class="btn btn-primary" id="connExpressionOk">@Resource.Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function LoadJSM() {
+        var link2 = document.createElement('script');
+        link2.setAttribute('src', '@Url.To($"{ManagementPage.UrlRoute}/jsm")');
+        document.getElementsByTagName('body')[0].appendChild(link2);
+    }
+
+    if (window.attachEvent) {
+        window.attachEvent('onload', LoadJSM);
+    }
+    else {
+        if (window.onload) {
+            var curronload = window.onload;
+            var newonload = function (evt) {
+                curronload(evt);
+                LoadJSM(evt);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = LoadJSM;
+        }
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="@Url.To($"{ManagementPage.UrlRoute}/jsmcss")" />

@@ -1,5 +1,6 @@
-﻿using Hangfire.Annotations;
+using Hangfire.Annotations;
 using Hangfire.Dashboard;
+using System;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace JobsPages4Hangfire.Dashboard.Support
         private readonly Assembly _assembly;
         private readonly string _baseNamespace;
         private readonly string[] _resourceNames;
+        private readonly Func<string> _prefixFactory;
 
         public CombinedResourceDispatcher(
             [NotNull] string contentType,
@@ -23,8 +25,24 @@ namespace JobsPages4Hangfire.Dashboard.Support
             _resourceNames = resourceNames;
         }
 
+        public CombinedResourceDispatcher(
+            [NotNull] string contentType,
+            [NotNull] Assembly assembly,
+            string baseNamespace,
+            Func<string> prefixFactory,
+            params string[] resourceNames) : this(contentType, assembly, baseNamespace, resourceNames)
+        {
+            _prefixFactory = prefixFactory;
+        }
+
         protected override async Task WriteResponse(DashboardResponse response)
         {
+            if (_prefixFactory != null)
+            {
+                var prefixBytes = new UTF8Encoding().GetBytes($"{_prefixFactory()}\n\r");
+                await response.Body.WriteAsync(prefixBytes, 0, prefixBytes.Length).ConfigureAwait(false);
+            }
+
             foreach (var resourceName in _resourceNames)
             {
                 var nameBytes = new UTF8Encoding().GetBytes($"\n\r/* {resourceName} */\n\r");

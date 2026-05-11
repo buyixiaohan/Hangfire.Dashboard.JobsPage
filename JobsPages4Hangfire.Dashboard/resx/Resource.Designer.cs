@@ -716,5 +716,161 @@ namespace JobsPages4Hangfire.Dashboard.resx {
                 return ResourceManager.GetString("Years", resourceCulture);
             }
         }
+
+        internal static string Annually {
+            get {
+                return ResourceManager.GetString("Annually", resourceCulture);
+            }
+        }
+
+        internal static string Client_ErrorTitle {
+            get {
+                return ResourceManager.GetString("Client_ErrorTitle", resourceCulture);
+            }
+        }
+
+        internal static string Client_TaskCreatedMessage {
+            get {
+                return ResourceManager.GetString("Client_TaskCreatedMessage", resourceCulture);
+            }
+        }
+
+        internal static string Client_TaskCreatedTitle {
+            get {
+                return ResourceManager.GetString("Client_TaskCreatedTitle", resourceCulture);
+            }
+        }
+
+        internal static string Client_UnknownError {
+            get {
+                return ResourceManager.GetString("Client_UnknownError", resourceCulture);
+            }
+        }
+
+        internal static string Client_ViewJob {
+            get {
+                return ResourceManager.GetString("Client_ViewJob", resourceCulture);
+            }
+        }
+
+        internal static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+
+        internal static string Confirm_UpdateSchedule {
+            get {
+                return ResourceManager.GetString("Confirm_UpdateSchedule", resourceCulture);
+            }
+        }
+
+        internal static string Daily {
+            get {
+                return ResourceManager.GetString("Daily", resourceCulture);
+            }
+        }
+
+        internal static string Error_NoCronExpressionDefined {
+            get {
+                return ResourceManager.GetString("Error_NoCronExpressionDefined", resourceCulture);
+            }
+        }
+
+        internal static string Error_NoDelayDefined {
+            get {
+                return ResourceManager.GetString("Error_NoDelayDefined", resourceCulture);
+            }
+        }
+
+        internal static string Error_NoJobNameDefined {
+            get {
+                return ResourceManager.GetString("Error_NoJobNameDefined", resourceCulture);
+            }
+        }
+
+        internal static string Error_NoScheduleDefined {
+            get {
+                return ResourceManager.GetString("Error_NoScheduleDefined", resourceCulture);
+            }
+        }
+
+        internal static string Error_UnableToParseDelay {
+            get {
+                return ResourceManager.GetString("Error_UnableToParseDelay", resourceCulture);
+            }
+        }
+
+        internal static string Error_UnableToParseSchedule {
+            get {
+                return ResourceManager.GetString("Error_UnableToParseSchedule", resourceCulture);
+            }
+        }
+
+        internal static string EveryMinute {
+            get {
+                return ResourceManager.GetString("EveryMinute", resourceCulture);
+            }
+        }
+
+        internal static string Hourly {
+            get {
+                return ResourceManager.GetString("Hourly", resourceCulture);
+            }
+        }
+
+        internal static string JobName {
+            get {
+                return ResourceManager.GetString("JobName", resourceCulture);
+            }
+        }
+
+        internal static string JobName_TitleTip {
+            get {
+                return ResourceManager.GetString("JobName_TitleTip", resourceCulture);
+            }
+        }
+
+        internal static string ManagementPage_Title {
+            get {
+                return ResourceManager.GetString("ManagementPage_Title", resourceCulture);
+            }
+        }
+
+        internal static string Monthly {
+            get {
+                return ResourceManager.GetString("Monthly", resourceCulture);
+            }
+        }
+
+        internal static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+
+        internal static string Queuing {
+            get {
+                return ResourceManager.GetString("Queuing", resourceCulture);
+            }
+        }
+
+        internal static string Seconds {
+            get {
+                return ResourceManager.GetString("Seconds", resourceCulture);
+            }
+        }
+
+        internal static string SelectValue {
+            get {
+                return ResourceManager.GetString("SelectValue", resourceCulture);
+            }
+        }
+
+        internal static string Weekly {
+            get {
+                return ResourceManager.GetString("Weekly", resourceCulture);
+            }
+        }
     }
 }
