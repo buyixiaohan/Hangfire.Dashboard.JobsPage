@@ -1,0 +1,3 @@
+[*]
+end_of_line = crlf  # 统一使用 Windows 格式；如果是跨平台项目，建议改为 lf
+insert_final_newline = true
